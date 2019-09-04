@@ -1,18 +1,18 @@
 import React from 'react'
 import Link from 'next/link'
-import css from './_project.scss'
+import css from './sidebar.scss'
 
 const Sidebar = () => (
-    <div className='sidebar-wrapper'>
-        <div className='sidebar-brand'>
+    <aside className={css.sidebar}>
+        <div className={css.sidebar__logo}>
             <Link href='/'>
-                <a className='logo'>Project P</a>
+                <a className={css.sidebar__title}>Project P</a>
             </Link>
         </div>
         <div className='select-location'>
             <p>Tjuna Toilet</p>
         </div>
-    </div>
+    </aside>
 );
 
 export default Sidebar
