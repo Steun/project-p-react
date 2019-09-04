@@ -3,7 +3,7 @@ import { Service } from '../types/Service';
 import { Visit } from '../types/Visit';
 
 export interface Visits {
-    results: Visit[];
+    data: Visit[];
 }
 
 const usePostVisitService = () => {

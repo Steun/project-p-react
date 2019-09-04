@@ -1,7 +1,7 @@
 import React from 'react'
 import css from './_project.scss'
 
-import usePostVisitService from '../services/usePostVisitService';
+import Visits from '../components/visits/Visits';
 
 
 import Sidebar from '../components/sidebar/sidebar'
@@ -34,6 +34,7 @@ class Project extends React.Component<Props, State> {
             <div className={css.project}>
                 <h1 className={css.title}>PROJECT P</h1>
                 <Sidebar />
+                <Visits/>
 
                 <Occupancy occupied={occupied}/>
                 <button onClick={this.handleOccupancyClick}>Toggle occupancy</button>

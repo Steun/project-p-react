@@ -1,15 +1,15 @@
 import React from 'react';
 import usePostVisitService from "../../services/usePostVisitService";
 
-const Visits: React.FC<{}> = () => {
+const Visits: React.FunctionComponent<{}> = () => {
     const service = usePostVisitService();
 
     return (
         <div>
             {service.status === 'loading' && <div>Loading...</div>}
             {service.status === 'loaded' &&
-            service.payload.results.map(visit => (
-                <div key={visit.id}>{visit.duration}</div>
+            service.payload.data.map(visit => (
+                <div key={visit.id}>Visit {visit.id}: duration: {visit.duration}s</div>
             ))}
             {service.status === 'error' && (
                 <div>Error, the backend moved to the dark side.</div>
