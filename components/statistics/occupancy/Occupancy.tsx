@@ -1,4 +1,4 @@
-import React, {FC} from 'react'
+import React, { FC } from 'react'
 import css from './Occupancy.scss'
 
 
@@ -10,7 +10,7 @@ export const Occupancy: FC<Props> = (props) => {
     const { occupied } = props;
 
     return (
-        <div className='occupancy'>
+        <div className={css.occupancy}>
             <span>Occupied: </span>
             <span>{occupied ? 'Yes' : 'No'}</span>
         </div>

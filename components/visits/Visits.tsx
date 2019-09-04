@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import usePostVisitService from "../../services/usePostVisitService";
 
-const Visits: React.FunctionComponent<{}> = () => {
+const Visits: FC<{}> = () => {
     const service = usePostVisitService();
 
     return (

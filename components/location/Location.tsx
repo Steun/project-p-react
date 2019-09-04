@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import usePostLocationService from "../../services/usePostLocationService";
 
-const Location: React.FunctionComponent<{}> = () => {
+const Location: FC<{}> = () => {
     const service = usePostLocationService();
 
     return (
