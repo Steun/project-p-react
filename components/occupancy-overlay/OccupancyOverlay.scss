@@ -1,0 +1,14 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  background-color: transparent;
+  opacity: .4;
+  transition: background-color ease 1s;
+
+  &.overlay__active {
+    background-color: red;
+    transition: background-color ease 1s;
+  }
+}

@@ -29,6 +29,7 @@ body, html {
   width: 100%;
   height: 100%;
   background: #fff;
+  z-index: 1;
   box-shadow: 0 0 25px rgba(26, 34, 46, 0.2);
 
   @media screen and (max-width: 360px) {
