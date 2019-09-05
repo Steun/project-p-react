@@ -5,7 +5,7 @@ import Meta from '../layouts/meta';
 import Sidebar from '../components/sidebar/sidebar';
 import Occupancy from '../components/statistics/occupancy/Occupancy';
 import Visits from '../components/visits/Visits';
-import OccupancyOverlay from "../components/occupancy-overlay/OccupancyOverlay";
+import OccupancyOverlay from '../components/occupancy-overlay/OccupancyOverlay';
 
 export interface Props {
   occupied: boolean;
@@ -32,7 +32,7 @@ export const Home = () => {
     <>
       <Meta />
       <div className={css.wrapper}>
-        <OccupancyOverlay occupied={occupied}/>
+        <OccupancyOverlay occupied={occupied} />
         <div className={css.project}>
           <Sidebar />
 
