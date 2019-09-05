@@ -1,5 +1,3 @@
-![Project P WEBSITE](http://i.imgur.com/wqzioFR.png)
-
 # project-p-react
 ##### Project P webapp refactored in React w/ SSR
 
