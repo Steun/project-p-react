@@ -3,22 +3,22 @@ import { Service } from '../types/Service';
 import { Location } from '../types/Location';
 
 export interface Location {
-    data: Location;
+  data: Location;
 }
 
 const usePostLocationService = () => {
-    const [result, setResult] = useState<Service<Location>>({
-        status: 'loading'
-    });
+  const [result, setResult] = useState<Service<Location>>({
+    status: 'loading',
+  });
 
-    useEffect(() => {
-        fetch('http://project-p.vps101.tjuna.com/location/1/')
-            .then(response => response.json())
-            .then(response => setResult({ status: 'loaded', payload: response }))
-            .catch(error => setResult({ status: 'error', error }));
-    }, []);
+  useEffect(() => {
+    fetch('http://project-p.vps101.tjuna.com/locations/1/')
+      .then(response => response.json())
+      .then(response => setResult({ status: 'loaded', payload: response }))
+      .catch(error => setResult({ status: 'error', error }));
+  }, []);
 
-    return result;
+  return result;
 };
 
 export default usePostLocationService;

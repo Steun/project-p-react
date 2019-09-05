@@ -1,19 +1,19 @@
 interface ServiceInit {
-    status: 'init';
+  status: 'init';
 }
 interface ServiceLoading {
-    status: 'loading';
+  status: 'loading';
 }
 interface ServiceLoaded<T> {
-    status: 'loaded';
-    payload: T;
+  status: 'loaded';
+  payload: T;
 }
 interface ServiceError {
-    status: 'error';
-    error: Error;
+  status: 'error';
+  error: Error;
 }
 export type Service<T> =
-    | ServiceInit
-    | ServiceLoading
-    | ServiceLoaded<T>
-    | ServiceError;
+  | ServiceInit
+  | ServiceLoading
+  | ServiceLoaded<T>
+  | ServiceError;
