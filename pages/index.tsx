@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import css from './_project.scss';
+import css from './_index.scss';
 
 import Sidebar from '../components/sidebar/sidebar';
 import Occupancy from '../components/statistics/occupancy/Occupancy';
