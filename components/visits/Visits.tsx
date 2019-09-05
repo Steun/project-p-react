@@ -67,7 +67,7 @@ const Visits: FC<{}> = () => {
         height={350}
         options={{
           maintainAspectRatio: false,
-          layout: {},
+          scales: { yAxes: [{ ticks: { stepSize: 1 } }] },
         }}
       />
     </div>
