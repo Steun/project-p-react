@@ -40,7 +40,7 @@ const Visits: FC<{}> = () => {
     return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
   }
 
-  function fillChart(visits: Visit[]) {
+  function fillChart(visits) {
     const newData = chartData.datasets[0].data;
     const currentWeek = getNumberOfWeek(new Date());
 
@@ -57,7 +57,7 @@ const Visits: FC<{}> = () => {
   return (
     <div>
       {service.status === 'loading' && <div>Loading...</div>}
-      {service.status === 'loaded' && fillChart(service.payload.data)}
+      {service.status === 'loaded' && fillChart(service.payload)}
       {service.status === 'error' && (
         <div>Error, the backend moved to the dark side.</div>
       )}

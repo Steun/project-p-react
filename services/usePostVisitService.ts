@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Service } from '../types/Service';
 import { Visit } from '../types/Visit';
+import { API_URL } from '../pages';
 
 export interface Visits {
   data: Visit[];
@@ -12,7 +13,7 @@ const usePostVisitService = () => {
   });
 
   useEffect(() => {
-    fetch('http://project-p.vps101.tjuna.com/visits')
+    fetch(`${API_URL}/visits`)
       .then(response => response.json())
       .then(response => setResult({ status: 'loaded', payload: response }))
       .catch(error => setResult({ status: 'error', error }));
