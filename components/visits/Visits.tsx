@@ -2,8 +2,6 @@ import React, { FC } from 'react';
 import { Bar } from 'react-chartjs-2';
 import usePostVisitService from '../../services/usePostVisitService';
 
-import { Visit } from '../../types/Visit';
-
 const Visits: FC<{}> = () => {
   const service = usePostVisitService();
   const chartData = {
