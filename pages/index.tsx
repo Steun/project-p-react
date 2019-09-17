@@ -66,9 +66,6 @@ export const Home = () => {
           <main className={css.content}>
             <Occupancy occupied={occupied} />
             <AverageDuration average_duration={average_duration}/>
-            <button type="button" onClick={fetchLocationData}>
-              Update
-            </button>
             <Visits />
           </main>
         </div>
