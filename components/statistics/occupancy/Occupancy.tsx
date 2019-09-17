@@ -10,8 +10,8 @@ export const Occupancy: FC<Props> = props => {
 
   return (
     <div className={css.occupancy}>
-      <span>Occupied: </span>
-      <span>{occupied ? 'Yes' : 'No'}</span>
+      <span>Bezet: </span>
+      <span>{occupied ? 'Ja' : 'Nee'}</span>
     </div>
   );
 };

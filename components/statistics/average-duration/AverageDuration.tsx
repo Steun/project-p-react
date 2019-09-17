@@ -14,7 +14,7 @@ export const AverageDuration: FC<Props> = props => {
 
     return (
         <div className={css.average_duration}>
-            <span>Average duration: </span>
+            <span>Gemiddelde bezoek: </span>
             <span>{getReadableTime(average_duration)}</span>
         </div>
     );
