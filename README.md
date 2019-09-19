@@ -3,5 +3,5 @@
 
 The website for displaying monitorized data and current toilet status.
 
-This repository holds the source code of the Angular website of [Project P](https://github.com/Proj-P).
+This repository holds the source code of the React frontend of [Project P](https://github.com/Proj-P).
 The website connects to the [Project P RESTful API](https://github.com/Proj-P/project-p-api) with websockets, to update statusses immediately. 
