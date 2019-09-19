@@ -9,7 +9,7 @@ import Visits from '../components/visits/Visits';
 import OccupancyOverlay from '../components/occupancy-overlay/OccupancyOverlay';
 import AverageDuration from "../components/statistics/average-duration/AverageDuration";
 
-export const API_URL = 'http://localhost:5000';
+export const API_URL = 'http://project-p.vps101.tjuna.com';
 
 export interface Props {
   occupied: boolean;
