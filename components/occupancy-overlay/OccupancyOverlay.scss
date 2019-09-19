@@ -8,7 +8,8 @@
   transition: background-color ease 1s;
 
   &.overlay__active {
-    background-color: red;
+    background-color: #ff9e95;
+    opacity: 1;
     transition: background-color ease 1s;
   }
 }
