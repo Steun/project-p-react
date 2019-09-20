@@ -3,6 +3,7 @@ import css from './redesign.scss';
 import io from 'socket.io-client';
 import Meta from '../layouts/meta';
 import { Visit } from '../types/Visit';
+import OccupancyOverlay from "../components/occupancy-overlay/OccupancyOverlay";
 export const API_URL = 'http://project-p.vps101.tjuna.com';
 
 export interface Props {
@@ -43,7 +44,8 @@ export const Redesign = () => {
     socket.on('visit', data => {
       console.log('visit!');
       console.log(data);
-      calculateVisitsAmount(data);
+      fetchLocationData();
+      // calculateVisitsAmount(data);
       // setOccupied(data.data.occupied);
     });
     socket.on('location', data => {
@@ -67,23 +69,14 @@ export const Redesign = () => {
 
   }
 
-  function makeTwoDigits(n: number): string {
-    return n < 10 ? `0${n}` : n.toString();
-  }
-
-  function prettyDate(date: Date): string {
-    return `${makeTwoDigits(date.getDay())} / ${makeTwoDigits(
-      date.getMonth()
-    )} / ${date.getFullYear()}`;
-  }
-
   return (
     <>
       <Meta />
       <div className={css.wrapper}>
+        <OccupancyOverlay occupied={occupied} />
         <div className={css.container}>
           <span className={css.count}>{visits === 0 ? '...' : visits}</span>
-          <span className={css.date}>{prettyDate(new Date())}</span>
+          <span className={css.date}>{new Date().toLocaleDateString()}</span>
           <span className={css.countDescription}>
             Kleine en grote boodschappen
           </span>
@@ -94,8 +87,8 @@ export const Redesign = () => {
           </div>
           <div className={css.smell}>
             <i className={css.iconCloud}></i>
-            {/*<span className={css.description}>Geur?</span>*/}
-            {/*<span className={css.smellType}>onbekend</span>*/}
+            <span className={css.description}>Geur?</span>
+            <span className={css.smellType}>Frissig</span>
           </div>
         </div>
       </div>
