@@ -63,5 +63,13 @@ $primary-color: #84D4FF;
             display: flex;
             flex-direction: column;
         }
+
+        .description {
+            font-size: 1rem;
+        }
+
+        .occupied, .smellType {
+            font-size: 1.4rem;
+        }
     }
 }

@@ -58,11 +58,23 @@ export const Redesign = () => {
 
   function calculateVisitsAmount(data: Visit[]) {
     const today = new Date();
-    const visitsToday = data.filter(
-      visit => new Date(visit.start_time).getDate() === today.getDate()
-    );
+    if (data.length > 0) {
+      const visitsToday = data.filter(
+          visit => new Date(visit.start_time).getDate() === today.getDate()
+      );
+      setVisits(visitsToday.length);
+    }
 
-    setVisits(visitsToday.length);
+  }
+
+  function makeTwoDigits(n: number): string {
+    return n < 10 ? `0${n}` : n.toString();
+  }
+
+  function prettyDate(date: Date): string {
+    return `${makeTwoDigits(date.getDay())} / ${makeTwoDigits(
+      date.getMonth()
+    )} / ${date.getFullYear()}`;
   }
 
   return (
@@ -70,8 +82,8 @@ export const Redesign = () => {
       <Meta />
       <div className={css.wrapper}>
         <div className={css.container}>
-          <span className={css.count}>{visits}</span>
-          <span className={css.date}>19 / 09 / 2019</span>
+          <span className={css.count}>{visits === 0 ? '...' : visits}</span>
+          <span className={css.date}>{prettyDate(new Date())}</span>
           <span className={css.countDescription}>
             Kleine en grote boodschappen
           </span>
@@ -82,8 +94,8 @@ export const Redesign = () => {
           </div>
           <div className={css.smell}>
             <i className={css.iconCloud}></i>
-            <span className={css.description}>Geur?</span>
-            <span className={css.smellType}>Frissig</span>
+            {/*<span className={css.description}>Geur?</span>*/}
+            {/*<span className={css.smellType}>onbekend</span>*/}
           </div>
         </div>
       </div>
