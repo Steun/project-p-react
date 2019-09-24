@@ -4,7 +4,7 @@ import io from 'socket.io-client';
 import Meta from '../layouts/meta';
 import { Visit } from '../types/Visit';
 import OccupancyOverlay from "../components/occupancy-overlay/OccupancyOverlay";
-export const API_URL = 'http://project-p.vps101.tjuna.com';
+export const API_URL = 'https://project-p.vps101.tjuna.com';
 
 export interface Props {
   occupied: boolean;
