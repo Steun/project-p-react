@@ -3,13 +3,12 @@
   height: 100%;
   pointer-events: none;
   position: absolute;
-  background-color: transparent;
-  opacity: .4;
-  transition: background-color ease 1s;
+  background-color: #ff9e95;
+  opacity: 0;
+  transition: opacity ease 4s;
 
   &.overlay__active {
-    background-color: #ff9e95;
     opacity: 1;
-    transition: background-color ease 1s;
+    transition: opacity ease 4s;
   }
 }
