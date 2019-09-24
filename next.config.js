@@ -5,7 +5,7 @@
 //
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withSourceMaps = require('@zeit/next-source-maps');
+// const withSourceMaps = require('@zeit/next-source-maps');
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withProgressBar = require('next-progressbar');
 
@@ -38,9 +38,7 @@ const nextConfig = {
   },
 };
 
-module.exports = withSourceMaps(
-  withProgressBar({
-    ...nextConfig,
-    ...customConfig,
-  })
-);
+module.exports = withProgressBar({
+  ...nextConfig,
+  ...customConfig,
+});
