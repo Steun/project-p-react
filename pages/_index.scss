@@ -25,12 +25,11 @@ html {
   background: $primary-color;
   text-transform: uppercase;
   font-weight: bold;
-  overflow: scroll;
   color: #fff;
 
   .container {
     display: grid;
-    grid-template-columns: 115px 230px;
+    grid-template-columns: 122px 230px;
     grid-template-rows: 20px 80px 10px 80px;
     z-index: 1;
 
