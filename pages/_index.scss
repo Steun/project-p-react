@@ -1,43 +1,105 @@
-$background-color: #c2f29e;
+@import '../styles/breakpoints';
+
+$primary-color: #84d4ff;
 
 * {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   font-family: 'Lexend Deca', 'Helvetica Neue', sans-serif;
-  letter-spacing: .6px;
+  letter-spacing: 0.6px;
 }
 
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100vw;
-  background-color: $background-color;
-}
+  height: 100vh;
+  background: $primary-color;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: scroll;
+  color: #fff;
 
-.project {
-  display: flex;
-  max-width: 1024px;
-  max-height: 512px;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  z-index: 1;
-  box-shadow: 0 0 25px rgba(26, 34, 46, 0.2);
+  .container {
+    display: grid;
+    grid-template-columns: 115px 230px;
+    grid-template-rows: 20px 80px 10px 80px;
+    z-index: 1;
 
-  @media screen and (max-width: 360px) {
-    flex-direction: column;
-  }
+    @include for-phone-only {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
-  .content {
-    width: 100%;
-    padding: 1em;
+      > * {
+        padding-top: 20px;
+      }
+    }
+
+    .count {
+      justify-self: start;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      font-size: 6rem;
+      line-height: 75px;
+    }
+
+    .date {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      font-size: 1rem;
+    }
+
+    .countDescription {
+      grid-column-start: 2;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      font-size: 1.5rem;
+    }
+
+    .occupancy {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 4;
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .smell {
+      grid-column-start: 3;
+      grid-column-end: 2;
+      grid-row-start: 4;
+      grid-row-end: 4;
+      font-size: 1.2rem;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .description {
+      font-size: 1rem;
+    }
+
+    .occupied,
+    .smellType {
+      font-size: 1.4rem;
+    }
   }
 }
