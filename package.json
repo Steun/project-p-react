@@ -11,7 +11,8 @@
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
     "test": "NODE_ENV=test jest . --runInBand",
-    "test:coverage": "NODE_ENV=test jest . --coverage"
+    "test:coverage": "NODE_ENV=test jest . --coverage",
+    "deploy": "next build && next export && firebase deploy"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
