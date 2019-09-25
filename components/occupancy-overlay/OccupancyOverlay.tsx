@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import './OccupancyOverlay.scss';
 
 export interface Props {
   occupied: boolean;
