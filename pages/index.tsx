@@ -24,7 +24,7 @@ export const Home = () => {
           setAverage_duration(res.average_duration);
         });
 
-    fetch(`${API_URL}/locations/1/visits`)
+    fetch(`${API_URL}/visits/recent`)
         .then(res => res.json())
         .then(res => {
           calculateVisitsAmount(res);
